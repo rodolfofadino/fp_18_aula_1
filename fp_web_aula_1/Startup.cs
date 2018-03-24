@@ -46,6 +46,9 @@ namespace fp_web_aula_1
 
             // app.UseMiddleware<MeuMiddleware>();
             app.UseMeuMiddleware();
+
+            app.UseStaticFiles();
+
             app.UseMvc(r =>
             {
                 //r.MapRoute(
