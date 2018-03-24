@@ -1,7 +1,9 @@
 ﻿using fp_web_aula_1.Controllers;
+using fp_web_aula_1.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -11,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace fp_web_aula_1
 {
-    public class Startup 
+    public class Startup
     {
         public void ConfigureServices(IServiceCollection services)
         {
@@ -20,6 +22,11 @@ namespace fp_web_aula_1
             services.AddScoped<INoticiaService, NoticiaService>();
 
             //services.AddSingleton<ILogerApi, LogerApi>();
+
+            var connection =  @"Server=(localdb)\mssqllocaldb;Database=EFGetStarted.AspNetCore.NewDb2;Trusted_Connection=True;ConnectRetryCount=0";
+            services.AddDbContext<CopaContext>
+                (options => options.UseSqlServer(connection));
+
 
             services.AddMvc();
         }

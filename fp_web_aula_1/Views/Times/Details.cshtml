@@ -1,0 +1,51 @@
+﻿@model fp_web_aula_1.Models.Time
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+<div>
+    <h4>Time</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EnderecoDeEmail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EnderecoDeEmail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bandeira)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bandeira)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Publicado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Publicado)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+</body>
+</html>
