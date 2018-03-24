@@ -1,0 +1,15 @@
+﻿@model fp_web_aula_1.Model.Time
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_Layout";
+}
+<email mail-to="rodolfo"></email>
+<form asp-action="Create" asp-controller="Time" method="post">
+    <input asp-for="Nome" />
+    <input asp-for="Bandeira" />
+    <input asp-for="Publicado" />
+
+    <input type="submit" name="name" value="Salvar" />
+</form>
+
+
