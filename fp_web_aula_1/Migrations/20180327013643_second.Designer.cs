@@ -11,9 +11,10 @@ using System;
 namespace fp_web_aula_1.Migrations
 {
     [DbContext(typeof(CopaContext))]
-    partial class CopaContextModelSnapshot : ModelSnapshot
+    [Migration("20180327013643_second")]
+    partial class second
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

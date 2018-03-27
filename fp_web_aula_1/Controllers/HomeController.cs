@@ -17,7 +17,7 @@ namespace fp_web_aula_1.Controllers
         }
         public IActionResult Index()
         {
-            //i fakeTotalMiliseconds = 2;
+            //fakeTotalMiliseconds = 2;
             _log.Log(Request.HttpContext, TotalTime);
             _noticiaService.List();
 

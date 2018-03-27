@@ -17,10 +17,9 @@ namespace fp_web_aula_1
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddTransient<ILogerApi, LogerApi>();
-            services.AddScoped<ILogerApi, LogerApi>();
+            services.AddTransient<ILogerApi, LogerApi>();
+            //services.AddScoped<ILogerApi, LogerApi>();
             services.AddScoped<INoticiaService, NoticiaService>();
-
             //services.AddSingleton<ILogerApi, LogerApi>();
 
             var connection =  @"Server=(localdb)\mssqllocaldb;Database=EFGetStarted.AspNetCore.NewDb2;Trusted_Connection=True;ConnectRetryCount=0";
@@ -62,7 +61,6 @@ namespace fp_web_aula_1
                 //name: "palestrantes",
                 //template: "trilha/{nomedatrilha}",
                 //defaults: new { controller = "Home", action = "listarpalestrantes" });
-
 
                 r.MapRoute(
                 name: "default",
